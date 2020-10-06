@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> NEWS ARTICLE </title>
+<link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+
+{% for post in data%}
+<div class ="user">
+
+<h3>ARTICLE </h3>
+
+<li> SOURCE ID : {{post.source.id}}</li>
+<li>SOURCE NAME : {{post.source.name}}</li>
+<li>AUTHOR : {{post.author}}</li>
+<li>TITLE : {{post.title}}</li>
+<li><a href="{{post.url}}">ARTICLE LINK</a></li>
+<h3>
+<img src="{{post.urlToImage}}" width="300px" height ="300px" />
+</h3>
+<h3>CONTENT :{{post.content}}</li>
+</div>
+{% endfor %}
+</body>
+</html>
